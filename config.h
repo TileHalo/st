@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Droid Sans Mono For Powerline:pixelsize=13:antialias=true:autohint=true";
+static char font[] = "Droid Sans Mono For Powerline:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -133,7 +133,7 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -145,7 +145,7 @@ static Shortcut shortcuts[] = {
 	{ MODKEY|ShiftMask,     XK_Next,        xzoom,          {.f = -1} },
 	{ MODKEY|ShiftMask,     XK_Home,        xzoomreset,     {.f =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
-	{ MODKEY|ShiftMask,     XK_Insert,      clippaste,      {.i =  0} },
+	{ ControlMask|ShiftMask,     XK_v,           clippaste,      {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_C,           clipcopy,       {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_V,           clippaste,      {.i =  0} },
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
